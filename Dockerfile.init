@@ -1,0 +1,5 @@
+FROM alpine:latest
+RUN apk add git bash
+COPY clone.sh /entrypoint.sh
+VOLUME /git
+ENTRYPOINT /entrypoint.sh
